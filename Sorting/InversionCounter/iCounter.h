@@ -32,6 +32,7 @@ private:
 
 	template <typename T>
 	vector<T> mrg(vector<T> const & a, vector<T> const & b) {
+		// lengths will be different for n != 2^m
 		size_t an{ a.size() };
 		size_t bn{ b.size() };
 		size_t n2{ an + bn };
