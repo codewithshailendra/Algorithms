@@ -1,12 +1,7 @@
+
 #include <iostream>
-#include <array>
-#include <vector>
 #include <random>
-#include <cmath>
-#include <string>
-#include <sstream>
 #include <algorithm>
-#include "Stopwatch.h"
 #include "MSort.h"
 
 using namespace std;
@@ -23,20 +18,16 @@ vector<int> initialise(size_t n) {
 int main()
 {
 	size_t m{ 3 };
-	Stopwatch sw;
 	for (int n = 1; n < 16; ++n) {
 		vector<int> a{ initialise(n) };
-		sw.start();
-		MSort<int> msorter;
-		vector<int> b{msorter.sort(a) };
-		sw.stop();
+		//vector<int> a{ 1,3,2,4,5,6,7,8 };
+		vector<int> b{ MSort<int>::sort(a) };
 		if (std::is_sorted(b.cbegin(), b.cend())) {
-			cout << "Array length " << b.size() << " sorted in " << sw.display() << endl;
+			cout << "Array length " << b.size() << " sorted" << endl;
 		}
 		else {
-			cout << "Error - Not sorted"<< endl;;
+			cout << "Error - Not sorted" << endl;;
 		}
 	}
 	return 0;
 }
-
