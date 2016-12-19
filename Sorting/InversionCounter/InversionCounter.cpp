@@ -2,63 +2,94 @@
 #include <random>
 #include <algorithm>
 #include <chrono>
+#include <fstream>
+#include <sstream>
 #include "iCounter.h"
 
 using namespace std;
 
 vector<int> initialise(size_t n) {
 	auto tp{ chrono::system_clock::now() };
-	auto seed{ static_cast<unsigned int>((tp.time_since_epoch()).count() % UINT16_MAX )};
+	auto seed{ static_cast<unsigned int>((tp.time_since_epoch()).count() % UINT16_MAX) };
 	default_random_engine dre(seed);
 	//default_random_engine dre;
 	uniform_int_distribution<int> uid(0, 1000);
 	vector<int> result;
-	n = static_cast<size_t>(pow(2.0, n));
 	while (n--) result.push_back(uid(dre));
 	return result;
 }
 
 vector<int> inverted(size_t n) {
 	vector<int> result;
-	n = static_cast<size_t>(pow(2.0, n));
 	while (n--) result.push_back(n);
 	return result;
 }
 
-void randomTest(int nMax) {
-	for (int N = 1; N < nMax; ++N) {
-		for (int rep = 0; rep < 1000; ++rep) {
-			iCounter<int> counter(initialise(N));
-			auto i = counter.inversions();
-			auto b = counter.brut();
-			if (i != b) {
-				cout << "[" << rep <<"] Failed for length " << pow(2.0, N) << "  Inversions = " << i << "   Bruteforce check = " << b << "  Difference = " << i-b << endl;
-			}
-		}
-		cout << "Completed length " << pow(2.0, N) << endl;
+void randomTest(int n) {
+	iCounter<int> counter(initialise(n));
+	auto i = counter.inversions();
+	auto b = counter.brut();
+	if (i != b) {
+		cout << "Failed for random sequence of length " << n << "  Inversions = " << i << "   Bruteforce check = " << b << "  Difference = " << b - i << endl;
+	}
+	else {
+		cout << "Completed random array of length " << n << endl;
 	}
 }
 
-void invertTest(int nMax) {
-	for (int N = 1; N < nMax; ++N) {
-		iCounter<int> counter(inverted(N));
-		auto i = counter.inversions();
-		auto b = counter.brut();
-		int n = static_cast<size_t>(pow(2.0, N));
-		n = n*(n - 1) / 2;
-		if (i != n) {
-			cout << "Algorithm failed for length " << pow(2.0, N) << "  Inversions = " << i << "   n(n-1)/2 = " << n << endl;
+void invertTest(int n) {
+	iCounter<int> counter(inverted(n));
+	auto i = counter.inversions();
+	auto b = counter.brut();
+	int calc = n*(n - 1) / 2;
+	if (i != calc) {
+		cout << "Algorithm failed for length " << n << "  Inversions = " << i << "   n(n-1)/2 = " << calc << endl;
+	}
+	else {
+		cout << "Algorithm completed length " << n << "   n(n-1)/2 = " << calc << endl;
+	}
+	if (b != calc) {
+		cout << "Bruteforce failed for length " << n << "  Bruteforce = " << b << "   n(n-1)/2 = " << calc << endl;
+	}
+	else {
+		cout << "Bruteforce completed length " << n << "   n(n-1)/2 = " << calc << endl;
+	}
+}
+
+void dataTest() {
+	vector<int> a;
+	string line;
+	string fname{ R"(C:\Users\n419\Repos\Algorithms\Sorting\InversionCounter\IntegerArray.txt)" };
+	ifstream dataFile(fname);
+	if (dataFile.is_open()) {
+		while (getline(dataFile, line)) {
+			stringstream ss{ line };
+			int ni;
+			ss >> ni;
+			a.push_back(ni);
 		}
-		if (b != n) {
-			cout << "Bruteforce failed for length " << pow(2.0, N) << "  Bruteforce = " << b << "   n(n-1)/2 = " << n << endl;
-		}
-		cout << "Completed length " << pow(2.0, N) << "   n(n-1)/2 = " << n << endl;
+		dataFile.close();
+		cout << "File completed" << endl;
+	}
+	iCounter<int> counter(a);
+	auto i = counter.inversions();
+	cout << i << " inversions" << endl;
+}
+
+void loopTest() {
+	int len{ -1 };
+
+	while (len != 0) {
+		cout << "\nlength? ";
+		cin >> len;
+		cout << endl;
+		invertTest(len);
+		randomTest(len);
 	}
 }
 
 int main()
 {
-	//invertTest(12);
-	randomTest(12);
+	dataTest();
 	return 0;
 }

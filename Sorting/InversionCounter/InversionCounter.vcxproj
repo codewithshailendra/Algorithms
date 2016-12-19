@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="IntegerArray.txt" />
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
