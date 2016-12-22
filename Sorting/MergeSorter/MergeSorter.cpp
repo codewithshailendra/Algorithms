@@ -17,7 +17,6 @@ vector<int> initialise(size_t n) {
 
 int main()
 {
-	size_t m{ 3 };
 	for (int n = 1; n < 16; ++n) {
 		vector<int> a{ initialise(n) };
 		//vector<int> a{ 1,3,2,4,5,6,7,8 };
