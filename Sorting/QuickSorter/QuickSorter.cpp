@@ -35,12 +35,12 @@ void dataTest() {
 			v.push_back(ni);
 		}
 		dataFile.close();
-		cout << "File completed" << endl;
+		cout << "File input completed" << endl;
 	}
 	std::cout << "Sort started";
 	QuickSort qs;
 	qs.sort(v);
-	std::cout << "   Sort completed" << endl;
+	std::cout << "Sort completed" << endl;
 	if (is_sorted(v.cbegin(), v.cend())) {
 		cout << "Random array of length " << v.size() << " sorted" << endl;
 	}
