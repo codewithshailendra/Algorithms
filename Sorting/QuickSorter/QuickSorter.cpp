@@ -7,6 +7,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include "QS2.h"
 
 using namespace std;
 
@@ -37,9 +38,8 @@ void dataTest() {
 		dataFile.close();
 		cout << "File input completed" << endl;
 	}
-	std::cout << "Sort started";
-	QuickSort qs;
-	qs.sort(v);
+	std::cout << "Sort started" << endl;
+	QSort<int>::Sort(v);
 	std::cout << "Sort completed" << endl;
 	if (is_sorted(v.cbegin(), v.cend())) {
 		cout << "Random array of length " << v.size() << " sorted" << endl;
@@ -57,10 +57,7 @@ void loopTest() {
 		bool OK{ false };
 		while (loop--) {
 			vector<int> v{ initialise(n) };
-			//std::cout << "Sort started";
-			QuickSort qs;
-			qs.sort(v);
-			//std::cout << "   Sort completed" << endl;
+			QSort<int>::Sort(v);
 			OK = is_sorted(v.cbegin(), v.cend());
 			if (!OK) break;
 		}
@@ -77,7 +74,7 @@ void loopTest() {
 
 int main()
 {
-	//loopTest();
-	dataTest();
+	loopTest();
+	//dataTest();
 	return 0;
 }

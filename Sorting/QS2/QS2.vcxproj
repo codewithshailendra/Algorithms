@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{931CD25E-7BFF-4C05-A380-5304EDD799A9}</ProjectGuid>
+    <ProjectGuid>{716DD3EC-A7CD-4545-865A-3637D686ADDC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>ScratchPad</RootNamespace>
+    <RootNamespace>QS2</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -145,14 +145,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="QSort.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Stopwatch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ScratchPad.cpp" />
+    <ClCompile Include="QS2.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Stopwatch.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
