@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <random>
 
+// A basic quicksort that includes a comparison counter
 class QuickSort
 {
 public:
