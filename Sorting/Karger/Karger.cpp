@@ -72,7 +72,7 @@ map <size_t, vector<size_t>> Load() {
 	string line;
 	string f1name{ R"(C:\Users\n419\Repos\Algorithms\Sorting\Karger\kargerMinCut.txt)" };
 	string fname{ R"(C:\Users\n419\Repos\Algorithms\Sorting\Karger\test.txt)" };
-	ifstream dataFile(fname);
+	ifstream dataFile(f1name);
 	if (dataFile.is_open()) {
 		while (getline(dataFile, line)) {
 			stringstream ss{ line };
