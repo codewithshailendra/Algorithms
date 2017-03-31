@@ -43,7 +43,7 @@ public:
 
 
 template <class T, class S>
-class QSort
+class QSortT
 {
 
 public:
