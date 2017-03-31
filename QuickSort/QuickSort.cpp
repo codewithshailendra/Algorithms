@@ -39,7 +39,7 @@ void dataTest() {
 		cout << "File input completed" << endl;
 	}
 	std::cout << "Sort started" << endl;
-	QSort<int,RandomSwap<int>>::Sort(v);
+	QSort<int, RandomSwap<int>>::Sort(v);
 	std::cout << "Sort completed" << endl;
 	if (is_sorted(v.cbegin(), v.cend())) {
 		cout << "Random array of length " << v.size() << " sorted" << endl;

@@ -56,7 +56,7 @@ while (std::getline(fs, line)) {
 	g.emplace_back(v, u, cost);
 }
 
-if (!(g.size() == edges*2)) { cout << R"(Error reading jobs)" << endl; exit(-3); }
+if (!(g.size() == edges * 2)) { cout << R"(Error reading jobs)" << endl; exit(-3); }
 
 //copy(g.cbegin(), g.cend(), ostream_iterator<edge>(cout, "\n"));
 }
@@ -82,7 +82,7 @@ int main()
 		edge next;
 		int minCost{ INT_MAX };
 		for (auto const & e : G) {
-			if ( (X.find(e.u) != X.cend() && V.find(e.v) != V.cend())){
+			if ((X.find(e.u) != X.cend() && V.find(e.v) != V.cend())) {
 				//cout << e.cost << endl;
 				if (e.cost < minCost) {
 					next = e;

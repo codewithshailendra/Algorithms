@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{839B3E4F-952C-4B47-AAA7-C361D709449C}</ProjectGuid>
+    <ProjectGuid>{5F3CF845-52EB-41EE-AC6C-7854CA7872B1}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Neighbour</RootNamespace>
+    <RootNamespace>TSP</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,27 +139,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="oldSOlve.txt" />
     <Text Include="ReadMe.txt" />
+    <Text Include="Text.txt" />
+    <Text Include="tsp.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CombGen.h" />
     <ClInclude Include="Combinations.h" />
-    <ClInclude Include="Graph2.h" />
+    <ClInclude Include="ComboGen.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="GraphDefs.h" />
-    <ClInclude Include="node.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="SetCompare.h" />
+    <ClInclude Include="SetHash.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TSP.h" />
+    <ClInclude Include="TSPI.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Graph2.cpp" />
+    <ClCompile Include="CombGen.cpp" />
     <ClCompile Include="Graph.cpp" />
-    <ClCompile Include="Neighbour.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="TSP.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="PA3.pdf" />
+    <ClCompile Include="TSPI.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

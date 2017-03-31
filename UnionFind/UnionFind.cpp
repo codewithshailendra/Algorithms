@@ -161,7 +161,7 @@ int main()
 		}
 	}
 
-	
+
 	cout << "Last edge cost was " << e.cost << endl;
 
 	// 106 may have been correct

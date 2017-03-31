@@ -41,7 +41,7 @@ vec add(vec a, vec b) {
 
 	while (i < minLen) {
 		auto res = div(a[i] + b[i], 10);
-		auto carry = div(result[i]+res.rem,10);
+		auto carry = div(result[i] + res.rem, 10);
 		result[i] = carry.rem;
 		result[i + 1] = res.quot + carry.quot;
 		++i;
@@ -82,7 +82,7 @@ void accumulate(vec & a, vec b) {
 		++i;
 	}
 	// remove leading zeros
-	if (result.back() == 0) { result.pop_back(); }	
+	if (result.back() == 0) { result.pop_back(); }
 	// put the result back in a
 	a.clear();
 	for (auto const & e : result) {
