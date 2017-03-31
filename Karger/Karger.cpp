@@ -56,7 +56,7 @@ void addSuperNode(map<node, vector<node>> & nodes, edge e) {
 		}
 		nodes.erase(nodes.find(e.second));
 	}
-	
+
 	if (nodes.find(e.first) == nodes.cend()) { // not yet a supernode so emplace it
 		nodes.emplace(e.first, contractedNodes);
 	}

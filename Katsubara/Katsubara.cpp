@@ -143,7 +143,7 @@ void splitter(big number, big & a, big & b) {
 	stringstream ss;
 	ss << number;
 	string s;
-	ss >> fixed >> setprecision(0) >> s; 
+	ss >> fixed >> setprecision(0) >> s;
 	size_t half{ s.length() };
 	half = half / 2 + (half % 2);
 	string aString(s.substr(0, half));
@@ -220,9 +220,9 @@ big Karatsuba2(big n1, big n2) {
 vector<int> K(vector<int> x, vector<int> y) {
 	// Note - digits need to be reversed in the vector
 	int n = x.size();
-	if (x.size()==1 && y.size()== 1) {
+	if (x.size() == 1 && y.size() == 1) {
 		cout << "-> " << x[0] << " & " << y[0] << "\n";
-		return vector<int>(1,x[0] * y[0]);
+		return vector<int>(1, x[0] * y[0]);
 	}
 	int l = n / 2;
 	vector<int> a(l, 0);
@@ -251,7 +251,7 @@ vector<int> K(vector<int> x, vector<int> y) {
 
 int main()
 {
-	cout << fixed << setprecision(0); 
+	cout << fixed << setprecision(0);
 	//cout << "Max value long long is " << LDBL_MAX << endl;
 	big A;
 	big B;

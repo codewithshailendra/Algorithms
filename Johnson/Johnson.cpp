@@ -6,7 +6,7 @@
 
 const std::string t1{ R"(t1.txt)" };
 const std::string t2{ R"(t2.txt)" };
-const std::string t3{ R"(t3.txt)" }; 
+const std::string t3{ R"(t3.txt)" };
 const std::string g1{ R"(g1.txt)" };  //Negative loop
 const std::string g2{ R"(g2.txt)" };  //Negative loop
 const std::string g3{ R"(g3.txt)" };  //shortest path = -19
@@ -46,7 +46,7 @@ void dijkstra(Graph & g, int source) {
 }
 
 int bellmanFord(Graph & g) {
-	int sp{ none};
+	int sp{ none };
 	for (int i{ 1 }; i < g.V(); ++i) {
 		BellmanFord B(g, i);
 		if (B.hasNegativeLoop()) {

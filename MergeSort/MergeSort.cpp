@@ -28,13 +28,13 @@ int main()
 		vector<int> a{ initialise(n) };
 		sw.start();
 		MSort<int> msorter;
-		vector<int> b{msorter.sort(a) };
+		vector<int> b{ msorter.sort(a) };
 		sw.stop();
 		if (std::is_sorted(b.cbegin(), b.cend())) {
 			cout << "Array length " << b.size() << " sorted in " << sw.display() << endl;
 		}
 		else {
-			cout << "Error - Not sorted"<< endl;;
+			cout << "Error - Not sorted" << endl;;
 		}
 	}
 	return 0;
