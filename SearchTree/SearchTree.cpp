@@ -1,6 +1,7 @@
 // A naive recursive implementation of optimal binary search tree problem
 #include <stdio.h>
 #include <limits.h>
+#include <iostream>
 
 // A utility function to get sum of array elements freq[i] to freq[j]
 int sum(int freq[], int i, int j);
@@ -59,5 +60,23 @@ int main()
 	int freq[] = { 20,5,17,10,20,3,25 };
 	int n = sizeof(keys) / sizeof(keys[0]);
 	printf("Cost of Optimal BST is %d ", optimalSearchTree(keys, freq, n));
-	return 0;
+	
+
+	n = 7;
+
+	for (int s{ 0 }; s < n; ++s) {
+		std::cout << "\ns = " << s << "\n";
+		for (int i{ 1 }; i < n + 1; ++i) {
+			std::cout << "i = " << i << "   A[" << i << ", " << i + s << "] is the minimum of:\n";
+			for (int r{ i }; r < i + s + 1; ++r) {
+				std::cout << " r= " << r << "\tA[i,r-1] = A[" << i << ", " << r - 1 << "]";
+				if (i > r - 1) { std::cout << " = 0"; }
+				std::cout << "\tA[r + 1, i + s] = A[" << r + 1 << ", " << i + s << "]";
+				if (r + 1 > i + s) { std::cout << " = 0"; }
+				std::cout << "\tSum p[" << i << "] to p[" << i + s << "]";
+				std::cout << "\n";
+			}
+		}
+	}
+
 }

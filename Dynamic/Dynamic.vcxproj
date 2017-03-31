@@ -154,8 +154,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DP2.cpp" />
-    <ClCompile Include="DP3.cpp" />
     <ClCompile Include="Dynamic.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>

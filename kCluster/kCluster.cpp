@@ -286,7 +286,6 @@ void secondGo() {
 	cout << "Clusters = " << graph.clusters() << endl;
 	char c;
 	cin >> c;
-	return 0;
 }
 
 int main()

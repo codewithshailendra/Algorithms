@@ -11,12 +11,12 @@
 
 #include "GraphDefs.h"
 
-class Graph
+class Graph2
 {
 public:
-	Graph();
-	Graph(std::string fname);
-	~Graph();
+	Graph2();
+	Graph2(std::string fname);
+	~Graph2();
 	std::vector<double> x_;
 	std::vector<double> y_;
 	std::vector<std::vector<double>> d_;

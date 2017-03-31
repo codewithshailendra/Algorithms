@@ -1,7 +1,7 @@
 #include "TSP.h"
 
 
-TSP::TSP(Graph G, int start) : g_{ G }, vertices_{}, start_{ start }, distance_{ 0 }, vSize_{ static_cast<int>(G.d_.size()) }
+TSP::TSP(Graph2 G, int start) : g_{ G }, vertices_{}, start_{ start }, distance_{ 0 }, vSize_{ static_cast<int>(G.d_.size()) }
 {
 	for (int v{ 0 }; v < vSize_; ++v) { vertices_.insert(v); }
 	distance_ = solve(0);

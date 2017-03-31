@@ -113,7 +113,7 @@ vec multiplier(const vec & a, const vec & b) {
 	vector<vec> rows;
 	size_t i{ 0 };
 	for (size_t i{ 0 }; i < b.size(); ++i) {
-		rows.push_back(scale(a, b[i], i));
+		rows.push_back(scale(a, b[i], static_cast<int>(i)));
 	}
 
 	for (auto const & row : rows) {
@@ -164,16 +164,16 @@ big tenToTheN(big number) {
 	stringstream ss;
 	ss << number;
 	string s{ ss.str() };
-	return power(s.length());
+	return power(static_cast<int>(s.length()));
 }
 
 big tenToTheN2(big number) {
 	stringstream ss;
 	ss << number;
 	string s{ ss.str() };
-	unsigned len{ s.length() };
+	unsigned len = static_cast<int>(s.length());
 	len = len / 2 + (len % 2);
-	return power(s.length() >> 1);
+	return power(static_cast<int>(s.length() >> 1));
 }
 
 big digitsIn(big number) {
@@ -219,7 +219,7 @@ big Karatsuba2(big n1, big n2) {
 
 vector<int> K(vector<int> x, vector<int> y) {
 	// Note - digits need to be reversed in the vector
-	int n = x.size();
+	int n = static_cast<int>(x.size());
 	if (x.size() == 1 && y.size() == 1) {
 		cout << "-> " << x[0] << " & " << y[0] << "\n";
 		return vector<int>(1, x[0] * y[0]);

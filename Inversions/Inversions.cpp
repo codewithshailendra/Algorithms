@@ -21,7 +21,7 @@ vector<int> initialise(size_t n) {
 
 vector<int> inverted(size_t n) {
 	vector<int> result;
-	while (n--) result.push_back(n);
+	while (n--) { result.push_back(static_cast<int>(n)); }
 	return result;
 }
 

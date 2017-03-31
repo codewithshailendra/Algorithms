@@ -146,8 +146,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="OBST2.cpp" />
-    <ClCompile Include="OBST3.cpp" />
     <ClCompile Include="SearchTree.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>

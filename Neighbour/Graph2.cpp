@@ -1,6 +1,6 @@
-#include "Graph.h"
+#include "Graph2.h"
 
-Graph::Graph() : x_{}, y_{}, d_{ std::vector<std::vector<double>>(4,std::vector<double>(4)) }, v_{ 4 }
+Graph2::Graph2() : x_{}, y_{}, d_{ std::vector<std::vector<double>>(4,std::vector<double>(4)) }, v_{ 4 }
 {
 	//d_[1][1] = 0;  d_[1][2] = 2; d_[1][3] = 9;  d_[1][4] = 10;
 	//d_[2][1] = 1;  d_[2][2] = 0; d_[2][3] = 6;  d_[2][4] = 4;
@@ -13,18 +13,18 @@ Graph::Graph() : x_{}, y_{}, d_{ std::vector<std::vector<double>>(4,std::vector<
 	d_[3][0] = 6;  d_[3][1] = 3; d_[3][2] = 12; d_[3][3] = 0;
 }
 
-Graph::Graph(std::string fname) : x_{}, y_{}, d_{}, v_{ 0 }
+Graph2::Graph2(std::string fname) : x_{}, y_{}, d_{}, v_{ 0 }
 {
 	getData(fname);
 	setDistances();
 }
 
-Graph::~Graph()
+Graph2::~Graph2()
 {
 }
 
 
-void Graph::getData(std::string fname)
+void Graph2::getData(std::string fname)
 {
 	/*
 	The first line indicates the number of vertices and edges,
@@ -58,7 +58,7 @@ void Graph::getData(std::string fname)
 	}
 }
 
-void Graph::setDistances()
+void Graph2::setDistances()
 {
 	for (int j{ 0 }; j < v_; ++j) {
 		d_[j][j] = 0;
@@ -73,7 +73,7 @@ void Graph::setDistances()
 	}
 }
 
-void Graph::printD()
+void Graph2::printD()
 {
 	std::cout << "\t";
 	for (int j{ 0 }; j < v_; ++j) {

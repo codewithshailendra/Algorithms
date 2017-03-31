@@ -34,7 +34,7 @@ public:
 
 	void setScore(int score) { dScore_ = score; }
 
-	int position() { return position_; }
+	int position() { return static_cast<int>(position_); }
 
 	void setPosition(size_t pos) { position_ = pos; }
 

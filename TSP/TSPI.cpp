@@ -130,6 +130,9 @@ int TSPI::calcAndSolve(int start)
 	std::set<int> one{ 1 };
 	int loop{ 0 };
 
+	Memo lastA_;
+	Memo thisA_;
+
 	for (int s{ 1 }; s <= vSize_; ++s) {
 
 		Combinations generator(vSize_, s);

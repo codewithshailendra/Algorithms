@@ -112,7 +112,7 @@ vec multiplier(const vec & a, const vec & b) {
 	vector<vec> rows;
 	size_t i{ 0 };
 	for (size_t i{ 0 }; i < b.size(); ++i) {
-		rows.push_back(mult(a, b[i], i));
+		rows.push_back(mult(a, b[i], static_cast<int>(i)));
 	}
 
 	for (auto const & row : rows) {

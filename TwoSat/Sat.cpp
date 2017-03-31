@@ -69,7 +69,7 @@ void Sat::getConstraints() {
 		e_ += 2;
 	}
 	fs.close();
-	v_ = adj_->size();
+	v_ = static_cast<int>(adj_->size());
 	std::cout << adj_->size() << " nodes and " << e_ << " edges created\n";
 }
 

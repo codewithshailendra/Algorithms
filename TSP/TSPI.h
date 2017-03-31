@@ -28,7 +28,7 @@ private:
 	Graph g_;
 	std::set<int> vertices_;
 	std::queue<int> route_;
-	//Memo A_;
+	Memo A_;
 	std::vector<std::set<int>> allSets_;
 	int start_;
 	int distance_;
