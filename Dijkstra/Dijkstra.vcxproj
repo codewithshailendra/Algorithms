@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{020D4873-0F9D-48F1-89FF-2CC2D9EA6D9B}</ProjectGuid>
+    <ProjectGuid>{814DBCC3-457A-4DB4-B56E-D220527D290E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>BFS</RootNamespace>
+    <RootNamespace>Dijkstra</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,17 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="data.txt" />
+    <Text Include="dijkstraData.txt" />
     <Text Include="ReadMe.txt" />
+    <Text Include="Results 1.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Graph.h" />
-    <ClInclude Include="Node.h" />
+    <ClInclude Include="Heap.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BFS.cpp" />
-    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="Dijkstra.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

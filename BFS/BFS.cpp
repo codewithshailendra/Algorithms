@@ -37,4 +37,3 @@ int main()
 	std::cin >> i;
 	return 0;
 }
-

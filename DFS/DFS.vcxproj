@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{020D4873-0F9D-48F1-89FF-2CC2D9EA6D9B}</ProjectGuid>
+    <ProjectGuid>{23BCFF85-DCCF-45E0-8CA3-398E8FA38671}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>BFS</RootNamespace>
+    <RootNamespace>DFS</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,14 +142,19 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Graph.h" />
-    <ClInclude Include="Node.h" />
+    <ClInclude Include="DepthFirstOrder.h" />
+    <ClInclude Include="DFSPaths.h" />
+    <ClInclude Include="DiGraph.h" />
+    <ClInclude Include="KSCC.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BFS.cpp" />
-    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="DepthFirstOrder.cpp" />
+    <ClCompile Include="DFS.cpp" />
+    <ClCompile Include="DFSPaths.cpp" />
+    <ClCompile Include="DiGraph.cpp" />
+    <ClCompile Include="KSCC.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
