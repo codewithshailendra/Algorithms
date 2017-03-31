@@ -37,7 +37,7 @@ int main()
 	int top{ componentCount < 10 ? componentCount : 10 };
 	std::cout << "\nResult ordered by component size\n";
 	for (auto const & cc : G.topComponents(top)) {
-		std::cout << cc.first << " nodes in component " << cc.second<< "\n";
+		std::cout << cc.first << " nodes in component " << cc.second << "\n";
 	}
 	G.checkContraints();
 	char c;
