@@ -1,0 +1,62 @@
+double TSPI::solve(int start)
+{
+
+	//stores intermediate values in map
+	std::map<int, double> minCostDP;
+	std::map<int, int>  parent;
+
+	// allSets is returned sorted from smallest to largest set size
+	std::vector<std::set<int>> allSets{ getCombinations(vSize_ - 1) };
+
+	for (std::set<int> const & s : allSets) {
+		
+		for (int currentVertex{ 1 }; currentVertex < vSize_; ++currentVertex) {
+			std::cout << "\nCurrent vertex = " << currentVertex << ": ";
+			if (s.count(currentVertex)!=0) {
+				std::cout << " skipping " << currentVertex << "\n";
+				continue;
+			}
+
+			std::cout << "\nSet: ";
+			std::copy(s.cbegin(), s.cend(), std::ostream_iterator<int>(std::cout, ","));
+
+			/*SetHash index = SetHash(s, currentVertex);
+			double minCost{ DBL_MAX };
+			int minPrevVertex{ 0 };
+			std::set<int> copySet(s);
+			for (auto preVertex : s) {
+				double cost = g_.d_[preVertex][currentVertex] + getCost(copySet, preVertex, minCostDP);
+				if (cost < minCost) {
+					minCost = cost;
+					minPrevVertex = preVertex;
+				}
+			}
+			if (s.size() == 0) {
+				minCost = g_.d_[0][currentVertex];
+			}
+
+			minCostDP.emplace(index, minCost);
+			parent.emplace(SetHash(s,0), minPrevVertex);
+		*/
+		}
+	}
+
+	//std::set<int> set;
+	//for (int i = 1; i < vSize_; i++) {
+	//	set.insert(i);
+	//}
+	double min{ DBL_MAX };
+	//int prevVertex = -1;
+	////to avoid ConcurrentModificationException copy set into another set while iterating
+	//std::set<int> copySet(set);
+	//for (int k : set) {
+	//	double cost = g_.d_[k][0] + getCost(copySet, k, minCostDP);
+	//	if (cost < min) {
+	//		min = cost;
+	//		prevVertex = k;
+	//	}
+	//}
+
+	//parent.emplace(SetHash(set, 0), prevVertex);
+	return min;
+}
