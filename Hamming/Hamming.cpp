@@ -113,7 +113,7 @@ int main()
 		for (size_t j{ i + 1 }; j < l; ++j) {
 			triple xor{ current^v[j] };
 			size_t hamming{ xor.count() };
-			std::cout << "Distance from " << i << " [" << current << "] to " << j << " [" << v[j] << "] is " << hamming  << "\n";
+			std::cout << "Distance from " << i << " [" << current << "] to " << j << " [" << v[j] << "] is " << hamming << "\n";
 			current = v[j];
 		}
 	}
