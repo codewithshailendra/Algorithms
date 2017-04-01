@@ -1,7 +1,5 @@
 #pragma once
 #include <vector>
-#include <algorithm>
-#include <iterator>
 
 using std::vector;
 
@@ -30,8 +28,6 @@ private:
 		}
 		if (ia < n) while (ia < n) result[i++] = a[ia++];
 		if (ib < n) while (ib < n) result[i++] = b[ib++];
-		//std::copy(result.cbegin(), result.cend(), std::ostream_iterator<T>(std::cout, ", "));
-		//std::cout << std::endl;
 		return result;
 	}
 
@@ -44,9 +40,6 @@ private:
 		vector<T> r(a.cbegin() + n2, a.cend());
 		l = msort(l);
 		r = msort(r);
-		std::copy(l.cbegin(), l.cend(), std::ostream_iterator<T>(std::cout, ", "));
-		std::copy(r.cbegin(), r.cend(), std::ostream_iterator<T>(std::cout, ", "));
-		std::cout << std::endl;
 		return mrg(l, r);
 	}
 };
