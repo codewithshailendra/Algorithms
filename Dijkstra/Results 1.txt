@@ -1,0 +1,24 @@
+Run 1 - Mistake was saving the score of the node in each iteration
+
+x Node 7: 	score = 10673
+x Node 37:        score = 27078
+x Node 59:        score = 25019
+x Node 82:        score = 33883
+x Node 99:        score = 7289
+x Node 115:       score = 10515
+y Node 133:       score = 2029
+y Node 165:       score = 2442
+x Node 188:       score = 18568
+x Node 197:       score = 16760
+
+Run 2 - Correct answers
+Node 7: 	score = 2599
+Node 37:        score = 2610
+Node 59:        score = 2947
+Node 82:        score = 2052
+Node 99:        score = 2367
+Node 115:       score = 2399
+Node 133:       score = 2029
+Node 165:       score = 2442
+Node 188:       score = 2505
+Node 197:       score = 3068
