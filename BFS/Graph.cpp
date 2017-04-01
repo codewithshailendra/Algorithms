@@ -3,7 +3,7 @@
 #pragma region DataLoading
 
 // loads a space separated value file of node adjacency pairs and creates a graph
-Graph::Graph(std::string path) : clock{ 0 }, ftOrder{}, rootMap{}
+Graph::Graph(std::string path) : clock{ 0 }, ftOrder{}, rootMap{}, treeNumber{ 0 }
 {
 	node = std::make_shared<std::map<Serial, Node>>();
 	nodeT = std::make_shared<std::map<Serial, Node>>();
@@ -105,7 +105,7 @@ void Graph::resetMap(NodeMap & graph) {
 // computes the transpose of the graph
 void Graph::transpose(NodeMap from, NodeMap to) {
 	to->clear();
-	Serial check{ from->size() };
+	const Serial check{ from->size() };
 	for (auto it = from->begin(); it != from->end();) {
 		// some nodes may be sources so need to be added explicitly if they are not adjacencies
 		if (to->find(it->first) == to->end()) { to->insert({ it->first, Node(it->first) }); }

@@ -17,7 +17,7 @@ struct Node
 	Serial post;
 	Adjacencies adj;
 
-	Node() : id{ 0 }, done{ false }, pre{ 0 }, post{ 0 } {
+	Node() : id{ 0 }, done{ false }, pre{ 0 }, post{ 0 }, leader{ 0 } {
 		adj = std::make_shared<std::vector<Serial>>();
 	}
 	explicit Node(Serial i) : id{ i }, done{ false }, pre{ 0 }, post{ 0 } {
