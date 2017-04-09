@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{B483F70E-D822-424B-B584-4B195FE75698}</ProjectGuid>
+    <ProjectGuid>{14706862-0B60-4875-B7F1-762B0F412B93}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>MaxSubArray</RootNamespace>
+    <RootNamespace>SubArray</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,10 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MaxSubArray.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="SubArray.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

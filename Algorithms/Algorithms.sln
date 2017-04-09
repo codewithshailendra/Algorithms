@@ -61,6 +61,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HashTable", "..\HashTable\H
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaxSubArray", "..\MaxSubArray\MaxSubArray.vcxproj", "{B483F70E-D822-424B-B584-4B195FE75698}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SubArray", "..\SubArray\SubArray.vcxproj", "{14706862-0B60-4875-B7F1-762B0F412B93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -301,6 +303,14 @@ Global
 		{B483F70E-D822-424B-B584-4B195FE75698}.Release|x64.Build.0 = Release|x64
 		{B483F70E-D822-424B-B584-4B195FE75698}.Release|x86.ActiveCfg = Release|Win32
 		{B483F70E-D822-424B-B584-4B195FE75698}.Release|x86.Build.0 = Release|Win32
+		{14706862-0B60-4875-B7F1-762B0F412B93}.Debug|x64.ActiveCfg = Debug|x64
+		{14706862-0B60-4875-B7F1-762B0F412B93}.Debug|x64.Build.0 = Debug|x64
+		{14706862-0B60-4875-B7F1-762B0F412B93}.Debug|x86.ActiveCfg = Debug|Win32
+		{14706862-0B60-4875-B7F1-762B0F412B93}.Debug|x86.Build.0 = Debug|Win32
+		{14706862-0B60-4875-B7F1-762B0F412B93}.Release|x64.ActiveCfg = Release|x64
+		{14706862-0B60-4875-B7F1-762B0F412B93}.Release|x64.Build.0 = Release|x64
+		{14706862-0B60-4875-B7F1-762B0F412B93}.Release|x86.ActiveCfg = Release|Win32
+		{14706862-0B60-4875-B7F1-762B0F412B93}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
